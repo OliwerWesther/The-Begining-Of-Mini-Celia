@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 0fe2dec5343d0964facf426f8009786b
+guid: ac2316be3b939924d844d00a94e9481d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3150436456555822978
-    second: Celia Front walkAnimation-Sheet_0
+      213: -5755905161166666068
+    second: Celia BackwalkAnimation-Sheet (1)_0
   - first:
-      213: 6832389269856777025
-    second: Celia Front walkAnimation-Sheet_1
+      213: -5687141454579347279
+    second: Celia BackwalkAnimation-Sheet (1)_1
   - first:
-      213: 2264597315188746355
-    second: Celia Front walkAnimation-Sheet_2
+      213: -9145593551883306011
+    second: Celia BackwalkAnimation-Sheet (1)_2
   - first:
-      213: 541925994353175939
-    second: Celia Front walkAnimation-Sheet_3
+      213: -7689600508458378227
+    second: Celia BackwalkAnimation-Sheet (1)_3
   - first:
-      213: -3775426690101169394
-    second: Celia Front walkAnimation-Sheet_4
+      213: -3982237239095999925
+    second: Celia BackwalkAnimation-Sheet (1)_4
   - first:
-      213: 161664300983757281
-    second: Celia Front walkAnimation-Sheet_5
+      213: -3304320026894818524
+    second: Celia BackwalkAnimation-Sheet (1)_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -62,7 +62,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_0
+      name: Celia BackwalkAnimation-Sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28f3378f34998bb20800000000000000
-      internalID: 3150436456555822978
+      spriteID: ca6c2d380caee10b0800000000000000
+      internalID: -5755905161166666068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_1
+      name: Celia BackwalkAnimation-Sheet (1)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 143f00567d581de50800000000000000
-      internalID: 6832389269856777025
+      spriteID: 1b056649af63311b0800000000000000
+      internalID: -5687141454579347279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_2
+      name: Celia BackwalkAnimation-Sheet (1)_2
       rect:
         serializedVersion: 2
         x: 128
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 378e02382477d6f10800000000000000
-      internalID: 2264597315188746355
+      spriteID: 5eb74e7be13541180800000000000000
+      internalID: -9145593551883306011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_3
+      name: Celia BackwalkAnimation-Sheet (1)_3
       rect:
         serializedVersion: 2
         x: 192
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38da8f312de458700800000000000000
-      internalID: 541925994353175939
+      spriteID: d0cdcac241d094590800000000000000
+      internalID: -7689600508458378227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_4
+      name: Celia BackwalkAnimation-Sheet (1)_4
       rect:
         serializedVersion: 2
         x: 256
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e03bdfcad6dfa9bc0800000000000000
-      internalID: -3775426690101169394
+      spriteID: b42c95074504cb8c0800000000000000
+      internalID: -3982237239095999925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Celia Front walkAnimation-Sheet_5
+      name: Celia BackwalkAnimation-Sheet (1)_5
       rect:
         serializedVersion: 2
         x: 320
@@ -240,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e9aff043d85e3200800000000000000
-      internalID: 161664300983757281
+      spriteID: 423a9bc4172b422d0800000000000000
+      internalID: -3304320026894818524
       vertices: []
       indices: 
       edges: []
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b9a2db0a657e1404bbd3fe2b5b267dcc
+    spriteID: 9596ba3ee37b4a34198ec0ccc28c231b
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Celia Front walkAnimation-Sheet_0: 3150436456555822978
-      Celia Front walkAnimation-Sheet_1: 6832389269856777025
-      Celia Front walkAnimation-Sheet_2: 2264597315188746355
-      Celia Front walkAnimation-Sheet_3: 541925994353175939
-      Celia Front walkAnimation-Sheet_4: -3775426690101169394
-      Celia Front walkAnimation-Sheet_5: 161664300983757281
+      Celia BackwalkAnimation-Sheet (1)_0: -5755905161166666068
+      Celia BackwalkAnimation-Sheet (1)_1: -5687141454579347279
+      Celia BackwalkAnimation-Sheet (1)_2: -9145593551883306011
+      Celia BackwalkAnimation-Sheet (1)_3: -7689600508458378227
+      Celia BackwalkAnimation-Sheet (1)_4: -3982237239095999925
+      Celia BackwalkAnimation-Sheet (1)_5: -3304320026894818524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

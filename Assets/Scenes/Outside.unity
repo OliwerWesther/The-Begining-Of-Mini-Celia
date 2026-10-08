@@ -38764,6 +38764,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3065358469146465161, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
   m_PrefabInstance: {fileID: 3681809876464868375}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1735312869 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8198180722215209813, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+  m_PrefabInstance: {fileID: 3681809876464868375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1755341943
 GameObject:
   m_ObjectHideFlags: 0
@@ -41527,6 +41532,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3755057958032008591, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1735312869}
     - target: {fileID: 4622665689652853491, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
       propertyPath: cliffTilemap
       value: 
