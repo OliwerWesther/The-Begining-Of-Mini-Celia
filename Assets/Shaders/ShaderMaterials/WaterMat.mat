@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMat
+  m_Shader: {fileID: -6465566751694194690, guid: 6fb36335161521c4fb018abfc6dad657, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_78f90a968f5f486583ef93f9db4f2e8e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c10d5e308e526df40b74f4982a7c1546, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a27dbf4d84f744ed990a75dedf9b6e8d_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: fd540df0f5a508649bc28b50a7504a2f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a2e93a1679df4c3e9c4c4ab8f1d8be9b_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a779b530957c46098dc25bbae8201ab2_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f94d9382ef49483d929f60874d950fe4_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c10d5e308e526df40b74f4982a7c1546, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterReflectionRenderer:
+        m_Texture: {fileID: 8400000, guid: ac1d3d776cb4e2f488542b18101754a4, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterReflectionTex:
+        m_Texture: {fileID: 8400000, guid: ac1d3d776cb4e2f488542b18101754a4, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterRenderer:
+        m_Texture: {fileID: 8400000, guid: ac1d3d776cb4e2f488542b18101754a4, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterRippleTexture:
+        m_Texture: {fileID: 2800000, guid: c10d5e308e526df40b74f4982a7c1546, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Brightness: 0.5
+    - _CellBrightness: 0.81
+    - _CellLineWidth: 0.02
+    - _CellScale: 2.8
+    - _CellSoftness: 0.099
+    - _ColorNoiseScale: 3
+    - _ColorNoiseSpeed: 0.04
+    - _ColorNoiseStrength: 0.718
+    - _Contrast: 1.05
+    - _EnableExternalAlpha: 0
+    - _Opacity: 0.433
+    - _Power: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReflectionContrast: 1
+    - _ReflectionDistortion: 0.012
+    - _ReflectionStrength: 0.65
+    - _ReflectionWaveScale: 15
+    - _ReflectionWaveSpeed: 0.5
+    - _RefractionStrength: 7.4
+    - _RippleScale: 18
+    - _RippleSpeed: 0.15
+    - _RippleStrength: 3
+    - _RippleTiling: 1
+    - _Ripple_Power: 0
+    - _Saturation: 1.15
+    - _SparkleScale: 46.9
+    - _SparkleStrength: 0.6
+    - _SparkleThreshold: 0.92
+    - _Test: 0
+    - _TextureOpacity: 0.381
+    - _Tiling: 5
+    - _UseWorldUV: 1
+    - _UseXZPlane: 0
+    - _WaterOpacity: 0.623
+    - _WaterTransparency: 1
+    - _Wave1Scale: 8.1
+    - _Wave1Speed: 1.54
+    - _Wave1Strength: 0.08
+    - _Wave2Scale: 5.9
+    - _Wave2Speed: -0.14
+    - _Wave2Strength: 0.131
+    - _WavePower: 2.6
+    - _WaveSpeed: 2.1
+    - _WaveTiling: 7.15
+    - _WorldScale: 0.31
+    - _ZWrite: 0
+    m_Colors:
+    - _CellColor: {r: 0.09999997, g: 0.9, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DeepColor: {r: 0, g: 0.17999998, b: 0.85, a: 1}
+    - _ReflectionTint: {r: 0.7, g: 0.9, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShallowColor: {r: 0.049999982, g: 0.75, b: 1, a: 1}
+    - _SparkleColor: {r: 0.8, g: 1, b: 1, a: 1}
+    - _UVOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _WaterColor: {r: 0.09344954, g: 0.4164666, b: 0.6603774, a: 0}
+    - _Wave1Direction: {r: 1, g: 0.25, b: 0, a: 0}
+    - _Wave2Direction: {r: -0.35, g: 1, b: 0, a: 0}
+    - _WaveColor: {r: 0, g: 0.79622644, b: 0.73983896, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &8967121389204990257
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 10

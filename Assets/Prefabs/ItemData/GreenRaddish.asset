@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb966aa9b6859004f9ad744e6c998f92, type: 3}
+  m_Name: GreenRaddish
+  m_EditorClassIdentifier: 
+  id: Green Raddish
+  description: A green Raddish.
+  icon: {fileID: -8548116818667322469, guid: 1fadd9d33cdda534da08e30b5365421c, type: 3}
+  prefab: {fileID: 3201520436539147585, guid: b5a9b612021c60b418777a49a9d78d0a, type: 3}

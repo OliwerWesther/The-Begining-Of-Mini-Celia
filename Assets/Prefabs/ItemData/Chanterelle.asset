@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb966aa9b6859004f9ad744e6c998f92, type: 3}
+  m_Name: Chanterelle
+  m_EditorClassIdentifier: 
+  id: Chanterelle
+  description: A golden sweet mushroom with a bitter undertone.
+  icon: {fileID: 21300000, guid: 98605c5cd27dab143a67f22262a565c4, type: 3}
+  prefab: {fileID: 3201520436539147585, guid: 72e91aa026d70ea4abbd20bdb4fd6056, type: 3}
