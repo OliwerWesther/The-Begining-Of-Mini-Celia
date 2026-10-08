@@ -9854,8 +9854,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3111928683025411568}
   - component: {fileID: 2422097579303184699}
+  - component: {fileID: 9172280925275770688}
   - component: {fileID: 3755057958032008591}
-  - component: {fileID: 1942037982159673813}
   - component: {fileID: 3717315735616895255}
   - component: {fileID: 7319833402503612388}
   - component: {fileID: 874403446427657055}
@@ -9943,6 +9943,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9172280925275770688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077175691526500261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b47570542093ec47af67cd474311fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSlots: 4
+  dropLocation: {x: 0, y: -1.2, z: 0}
+  audioSource: {fileID: 3065358469146465161}
+  droppedItemPrefab: {fileID: 8395736586585706607, guid: d3160db3c3209db4db4c7693253c9858, type: 3}
+  pickUpItemAudio: {fileID: 8300000, guid: 06af17fd74785e74bbddb0b2f6a42fa8, type: 3}
+  dropItemAudio: {fileID: 8300000, guid: b3d99df1f0d1e3749a6d9699d680d6a9, type: 3}
+  inventory:
+    m_Keys: []
+    m_Values: []
 --- !u!114 &3755057958032008591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9957,27 +9978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 3717315735616895255}
---- !u!114 &1942037982159673813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6077175691526500261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 324aebaa9494df2409d4025b489b0eb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropLocation: {x: 0, y: -1, z: 0}
-  ui: {fileID: 0}
-  audioSource: {fileID: 0}
-  droppedItemPrefab: {fileID: 8395736586585706607, guid: d3160db3c3209db4db4c7693253c9858, type: 3}
-  pickUpItemAudio: {fileID: 8300000, guid: 06af17fd74785e74bbddb0b2f6a42fa8, type: 3}
-  dropItemAudio: {fileID: 8300000, guid: b3d99df1f0d1e3749a6d9699d680d6a9, type: 3}
-  inventory:
-    m_Keys: []
-    m_Values: []
 --- !u!50 &3717315735616895255
 Rigidbody2D:
   serializedVersion: 5

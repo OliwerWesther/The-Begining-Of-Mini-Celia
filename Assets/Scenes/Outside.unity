@@ -38764,27 +38764,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3065358469146465161, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
   m_PrefabInstance: {fileID: 3681809876464868375}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1735312867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735312855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b47570542093ec47af67cd474311fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSlots: 2
-  dropLocation: {x: 0, y: -1, z: 0}
-  audioSource: {fileID: 1735312866}
-  droppedItemPrefab: {fileID: 8395736586585706607, guid: d3160db3c3209db4db4c7693253c9858, type: 3}
-  pickUpItemAudio: {fileID: 8300000, guid: 06af17fd74785e74bbddb0b2f6a42fa8, type: 3}
-  dropItemAudio: {fileID: 8300000, guid: b3d99df1f0d1e3749a6d9699d680d6a9, type: 3}
-  inventory:
-    m_Keys: []
-    m_Values: []
 --- !u!1 &1755341943
 GameObject:
   m_ObjectHideFlags: 0
@@ -41580,10 +41559,7 @@ PrefabInstance:
     - {fileID: 1942037982159673813, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6077175691526500261, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1735312867}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
 --- !u!1001 &8301076762263935948
 PrefabInstance:
