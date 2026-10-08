@@ -150,6 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStart: 0
   enabledPickupDelay: 1
+  sortingLayerName: Foreground
+  sortingOrder: 0
+  spriteRenderer: {fileID: 1577699493002471780}
   item: {fileID: 11400000, guid: 172a60347e5697544b344a0c350a001b, type: 2}
   pickedUp: 0
 --- !u!114 &8539194770938883589

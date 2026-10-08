@@ -1,40 +1,70 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Collider2D))]
 public class DroppedItem : MonoBehaviour
 {
-    [Header("settings")]
-    [SerializeField]
-    bool autoStart;
+    [Header("Settings")]
+    [SerializeField] private bool autoStart;
+    [SerializeField] private float enabledPickupDelay = 1f;
 
-    [SerializeField]
-    float enabledPickupDelay = 3.0f;
+    [Header("Sorting Settings")]
+    [SerializeField] private string sortingLayerName = "Default";
+    [SerializeField] private int sortingOrder = 1;
+
+    [Header("References")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Collider2D itemCollider;
 
     [Header("State")]
     public Item item;
-    public bool pickedUp = false;
+    public bool pickedUp;
 
+    public bool CanBePickedUp { get; private set; } = true;
 
-    public void Start()
+    private void Awake()
     {
-        if (autoStart && item != null)
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (itemCollider == null) itemCollider = GetComponent<Collider2D>();
+    }
+
+    public void Initialize(Item newItem)
+    {
+        item = newItem;
+        pickedUp = false;
+
+        if (itemCollider == null) itemCollider = GetComponent<Collider2D>();
+
+        if (spriteRenderer != null && item != null)
         {
-            Initialize(item);
+            spriteRenderer.sprite = item.icon;
+            spriteRenderer.sortingLayerName = sortingLayerName;
+            spriteRenderer.sortingOrder = sortingOrder;
+        }
+
+        if (enabledPickupDelay > 0)
+        {
+            StartCoroutine(PickupDelayRoutine());
+        }
+        else if (itemCollider != null)
+        {
+            itemCollider.enabled = true;
         }
     }
 
-    public void Initialize(Item item)
+    private IEnumerator PickupDelayRoutine()
     {
-        this.item = item;
-        var droppedItem = Instantiate(item.prefab, transform.position, Quaternion.identity);
-       // droppedItem.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
-        StartCoroutine(EnablePickup(enabledPickupDelay));
-    }
-    IEnumerator EnablePickup(float dealy)
-    {
-        yield return new WaitForSeconds(dealy);
-        GetComponent<Collider2D>().enabled = true;
+        CanBePickedUp = false;
+
+        // Temporarily disable the collider during the spawn delay
+        if (itemCollider != null) itemCollider.enabled = false;
+
+        yield return new WaitForSeconds(enabledPickupDelay);
+
+        CanBePickedUp = true;
+
+        // Force the collider back on so the player can pick it up
+        if (itemCollider != null) itemCollider.enabled = true;
     }
 }

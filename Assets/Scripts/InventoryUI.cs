@@ -5,34 +5,42 @@ using UnityEngine.Rendering;
 public class InventoryUI : MonoBehaviour
 {
     [Header("Prefabs")]
-    [SerializeField]
-    GameObject uiItemPrefab;
+    [SerializeField] GameObject uiItemPrefab;
 
     [Header("References")]
-    [SerializeField]
-    Inventory inventory;
-    [SerializeField]
-    Transform uiInventoryParent;
+    [SerializeField] Transform uiInventoryParent;
 
     [Header("State")]
-    [Header("SerializeField")]
-    SerializedDictionary<string, GameObject> inventoryUI = new();
+    [SerializeField] SerializedDictionary<string, GameObject> inventoryUI = new();
+
+    private void Start()
+    {
+        // Tell the persistent Inventory component that this is the active UI for this scene
+        if (Inventory.Instance != null)
+        {
+            Inventory.Instance.RegisterUI(this);
+        }
+    }
 
     public void AddUIItem(string inventoryId, Item item)
     {
         var itemUI = Instantiate(uiItemPrefab).GetComponent<ItemUI>();
-        itemUI.transform.SetParent(uiInventoryParent);
-        RectTransform rect = itemUI.GetComponent<RectTransform>();
-        rect.anchoredPosition = Vector3.zero;
+        
+        // Pass false to maintain proper local UI scale and position inside layout groups
+        itemUI.transform.SetParent(uiInventoryParent, false);
+
         inventoryUI.Add(inventoryId, itemUI.gameObject);
-        itemUI.Initialize(inventoryId, item, inventory.DropItem);
+
+        // Wire drop action directly to persistent Inventory instance
+        itemUI.Initialize(inventoryId, item, Inventory.Instance.DropItem);
     }
 
     public void RemoveUIItem(string inventoryId)
     {
-        var itemUI = inventoryUI.GetValueOrDefault(inventoryId);
-        inventoryUI.Remove(inventoryId);
-        Destroy(itemUI);
+        if (inventoryUI.TryGetValue(inventoryId, out GameObject itemUI))
+        {
+            inventoryUI.Remove(inventoryId);
+            Destroy(itemUI);
+        }
     }
-
 }
