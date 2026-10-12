@@ -146,7 +146,7 @@ MonoBehaviour:
   soundList:
   - name: Footstep
     sounds:
-    - {fileID: 8300000, guid: 3b7bf0ed915c8864e896df4bb640701e, type: 3}
+    - {fileID: 8300000, guid: d24da7e1aad1b20418a805beaae48c84, type: 3}
   - name: Climb
     sounds: []
   - name: Jump
