@@ -5,7 +5,7 @@ public enum SoundType
 {
     //all of the different sounds.
     Footstep,
-    Climb,
+    Climbing,
     Jump,
     Background,
 }

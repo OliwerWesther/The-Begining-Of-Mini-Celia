@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7857842185947775471}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -147,8 +147,9 @@ MonoBehaviour:
   - name: Footstep
     sounds:
     - {fileID: 8300000, guid: d24da7e1aad1b20418a805beaae48c84, type: 3}
-  - name: Climb
-    sounds: []
+  - name: Climbing
+    sounds:
+    - {fileID: 8300000, guid: 9634c06b10dd85a4f9ec3e5eef77c2d6, type: 3}
   - name: Jump
     sounds: []
   - name: Background
