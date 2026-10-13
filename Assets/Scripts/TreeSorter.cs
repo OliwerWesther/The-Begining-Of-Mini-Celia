@@ -14,7 +14,7 @@ public class TreeSorter : MonoBehaviour
         treeRend = GetComponent<SpriteRenderer>();
         logRend = GetComponentInChildren<SpriteRenderer>();
         playerOffset =  player.GetChild(4).GetChild(0).position.y - player.position.y;
-        treeOffset = transform.GetChild(0).GetChild(0).position.y - transform.position.y;
+        if (transform.childCount > 0) { treeOffset = transform.GetChild(0).GetChild(0).position.y - transform.position.y; }
     }
 
     // Update is called once per frame

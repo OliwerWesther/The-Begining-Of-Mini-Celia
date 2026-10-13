@@ -5,7 +5,8 @@ public class LeafOpacity : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     public float opacity = 0.5f;
 
-    public Material mat;
+
+
 
     public bool debug;
 
@@ -13,8 +14,7 @@ public class LeafOpacity : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //spriteRenderer.color = new Color(0, 0, 0, opacity);
-            //mat.color = new Color(0, 0, 0, opacity);
+            SetOpacity(opacity);
             if (debug)
             {
                 print("Player Entered");
@@ -27,13 +27,19 @@ public class LeafOpacity : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //spriteRenderer.color = new Color(1, 1, 1, 1);
-            //mat.color = new Color(1, 1, 1, 1);
+            SetOpacity(1f);
             if (debug)
             {
                 print("Player Exited");
             }
             
         }
+    }
+    private void SetOpacity(float value)
+    {
+        Color color = spriteRenderer.color;
+        color.a = value;
+        spriteRenderer.color = color;
+        spriteRenderer.material.SetColor("_ColorVariation", color);
     }
 }
