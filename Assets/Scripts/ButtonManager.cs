@@ -19,6 +19,11 @@ public class ButtonManager : MonoBehaviour
     public List<GameObject> ChestEnable = new List<GameObject>();
     public List<GameObject> ChestDisable = new List<GameObject>();
 
+    [Header("Questboard UI")]
+    public List<GameObject> PuestboardEnable = new List<GameObject>();
+    public List<GameObject> PuestboardDisable = new List<GameObject>();
+    public QuestBoard questBoardscript;
+
 
     //Door
     public void DoorOCE()
@@ -59,6 +64,17 @@ public class ButtonManager : MonoBehaviour
     {
         SetState(ChestEnable, false);
         SetState(Base, true);
+    }
+
+    public void QuestboardOCE()
+    {
+        SetState(ChestEnable, true);
+        SetState(ChestDisable, false);
+    }
+    public void QuestboardOCD()
+    {
+        SetState(ChestEnable, false);
+        questBoardscript.taskDone = false;
     }
 
 

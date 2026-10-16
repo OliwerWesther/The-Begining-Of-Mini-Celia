@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -10,6 +9,9 @@ public class Inventory : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private int maxSlots = 20;
+
+    [Header("Live bools")]
+    [SerializeField] public bool canPickup;
 
     [Header("Drop Location")]
     [SerializeField] new Vector3 dropLocation = new Vector3(0, -1, 0);
@@ -23,6 +25,11 @@ public class Inventory : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] AudioClip pickUpItemAudio;
     [SerializeField] AudioClip dropItemAudio;
+
+    [Header("Open Inventory")]
+    public KeyCode inventoryButton = KeyCode.I;
+    public GameObject inventoryCanvas;
+    public float onOff = 1;
 
     [Header("State")]
     [SerializeField] SerializedDictionary<string, Item> inventory = new();
@@ -42,6 +49,22 @@ public class Inventory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(inventoryButton) && onOff == 1) 
+        {
+            inventoryCanvas.SetActive(true);
+            onOff *= -1;
+            print("Inventroy: Open");
+        }
+        else if (Input.GetKeyUp(inventoryButton) && onOff == -1)
+        {
+            inventoryCanvas.SetActive(false);
+            onOff *= -1;
+            print("Inventroy: Close");
+        }
+    }
+
     public void RegisterUI(InventoryUI newUI)
     {
         ui = newUI;
@@ -50,34 +73,70 @@ public class Inventory : MonoBehaviour
             ui.AddUIItem(kvp.Key, kvp.Value);
         }
     }
-
     public void OnTriggerEnter2D(Collider2D other)
+    {
+       PickUp(other.gameObject);
+       /* if (canPickup)
+        {
+            if (!other.CompareTag("DroppedItem")) return;
+
+            var droppedItem = other.GetComponent<DroppedItem>();
+            if (droppedItem == null) return;
+
+            // ANTI-DUPE: Ignore if already picked up OR still on drop delay cooldown
+            if (droppedItem.pickedUp || !droppedItem.CanBePickedUp) return;
+
+            // Instantly mark as picked up before processing
+            droppedItem.pickedUp = true;
+
+            if (AddItem(droppedItem.item))
+            {
+                other.enabled = false; // Disable collider instantly
+                Destroy(other.gameObject);
+
+                if (audioSource != null && pickUpItemAudio != null)
+                {
+                    audioSource.PlayOneShot(pickUpItemAudio);
+                }
+            }
+            else
+            {
+                // Revert flag if inventory was full
+                droppedItem.pickedUp = false;
+            }
+        }*/
+    }
+
+    public void PickUp(GameObject other)
     {
         if (!other.CompareTag("DroppedItem")) return;
 
         var droppedItem = other.GetComponent<DroppedItem>();
         if (droppedItem == null) return;
 
-        // ANTI-DUPE: Ignore if already picked up OR still on drop delay cooldown
-        if (droppedItem.pickedUp || !droppedItem.CanBePickedUp) return;
-
-        // Instantly mark as picked up before processing
-        droppedItem.pickedUp = true;
-
-        if (AddItem(droppedItem.item))
+        if (canPickup || other.GetComponent<Plant>() == null)
         {
-            other.enabled = false; // Disable collider instantly
-            Destroy(other.gameObject);
+            // ANTI-DUPE: Ignore if already picked up OR still on drop delay cooldown
+            if (droppedItem.pickedUp || !droppedItem.CanBePickedUp) return;
 
-            if (audioSource != null && pickUpItemAudio != null)
+            // Instantly mark as picked up before processing
+            droppedItem.pickedUp = true;
+
+            if (AddItem(droppedItem.item))
             {
-                audioSource.PlayOneShot(pickUpItemAudio);
+                other.GetComponent<Collider2D>().enabled = false; // Disable collider instantly
+                Destroy(other.gameObject);
+
+                if (audioSource != null && pickUpItemAudio != null)
+                {
+                    audioSource.PlayOneShot(pickUpItemAudio);
+                }
             }
-        }
-        else
-        {
-            // Revert flag if inventory was full
-            droppedItem.pickedUp = false;
+            else
+            {
+                // Revert flag if inventory was full
+                droppedItem.pickedUp = false;
+            }
         }
     }
 
