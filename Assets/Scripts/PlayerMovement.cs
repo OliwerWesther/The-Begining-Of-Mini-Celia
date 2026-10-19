@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour,ISavable
 {
     public float moveSpeed;
     public Rigidbody2D rb;
@@ -55,4 +55,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
+
+    public object save()
+    {
+        return new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
+    public void load(object data)
+    {
+        transform.position = (Vector3)data;
+    }
+
 }
