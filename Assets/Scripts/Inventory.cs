@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] public bool canPickup;
 
     [Header("Drop Location")]
-    [SerializeField] new Vector3 dropLocation = new Vector3(0, -1, 0);
+    [SerializeField] Vector3 dropLocation = new Vector3(0, -1, 0);
 
     [Header("References")]
     [SerializeField] AudioSource audioSource;
@@ -155,14 +155,14 @@ public class Inventory : MonoBehaviour
     {
         if (!inventory.TryGetValue(inventoryId, out var item)) return;
 
-        inventory.Remove(inventoryId);
-        if (ui != null) ui.RemoveUIItem(inventoryId);
+        inventory.Remove(inventoryId); //Remove the said id from the inventory.
+        if (ui != null) ui.RemoveUIItem(inventoryId); //Remove the said Scripible object.
 
         // Calculate spawn position and explicitly snap Z to 0
         Vector3 spawnPos = transform.position + dropLocation;
         spawnPos.z = 0f;
 
-        var droppedItemObj = Instantiate(droppedItemPrefab, spawnPos, Quaternion.identity);
+        var droppedItemObj = Instantiate(droppedItemPrefab, spawnPos, Quaternion.identity); //Spawn back the object you collected.
         var droppedItem = droppedItemObj.GetComponent<DroppedItem>();
 
         if (droppedItem != null)

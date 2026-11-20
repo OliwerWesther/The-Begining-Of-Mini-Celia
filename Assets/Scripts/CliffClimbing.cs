@@ -50,11 +50,10 @@ public class CliffClimbing : MonoBehaviour
     {
         if (climbCheck == null || layers == null) return;
 
-        for (int i = 0; i < layers.Length; i++)
+        for (int i = 0; i < layers.Length; i++) //Check if all the layers has coliders.
         {
-            Collider2D col = Physics2D.OverlapCircle(climbCheck.position, groundCheckRadius, layers[i].layerMask);
-           
-            bool isOverlapping = (col != null);
+            Collider2D collider = Physics2D.OverlapCircle(climbCheck.position, groundCheckRadius, layers[i].layerMask);
+            bool isOverlapping = (collider != null);
 
             if (isOverlapping)
             {
@@ -68,14 +67,9 @@ public class CliffClimbing : MonoBehaviour
         }
     }
 
-    private void SetActiveLayer(int newLayerIndex)
+    private void SetActiveLayer(int newLayerIndex) //Give each layer a top and bottom collider.
     {
         activeLayerIndex = newLayerIndex;
-
-        if (debug)
-        {
-            Debug.Log($"Switched to: {layers[newLayerIndex].layerName}");
-        }
 
         for (int i = 0; i < layers.Length; i++)
         {
@@ -89,7 +83,7 @@ public class CliffClimbing : MonoBehaviour
         }
     }
 
-    private void TryClimbTilemap()
+    private void TryClimbTilemap() //Check if the player can climb on said tile.
     {
         if (cliffTilemap == null) return;
 
@@ -106,19 +100,17 @@ public class CliffClimbing : MonoBehaviour
         }
     }
 
-    private IEnumerator ClimbTileRoutine(Vector3 climbOffset)
+    private IEnumerator ClimbTileRoutine(Vector3 climbOffset) //Make the player do the climbing.
     {
         isClimbing = true;
 
         if (playerCollider != null) playerCollider.enabled = false;
         if (playerAnimator != null) playerAnimator.SetBool(IsClimbingHash, true);
 
-        if (debug) Debug.Log("Climbing started");
-
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + climbOffset;
 
-        while (Vector3.Distance(transform.position, targetPosition) > 0.001f)
+        while (Vector3.Distance(transform.position, targetPosition) > 0.001f) //Move the player to said position with time.
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,

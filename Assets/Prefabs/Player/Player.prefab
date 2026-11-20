@@ -9858,7 +9858,6 @@ GameObject:
   - component: {fileID: 3755057958032008591}
   - component: {fileID: 3717315735616895255}
   - component: {fileID: 7319833402503612388}
-  - component: {fileID: 874403446427657055}
   - component: {fileID: 8198180722215209813}
   - component: {fileID: 4622665689652853491}
   - component: {fileID: 3779035486976932984}
@@ -9879,7 +9878,7 @@ Transform:
   m_GameObject: {fileID: 6077175691526500261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.08, y: 5.99, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9955,12 +9954,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b47570542093ec47af67cd474311fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSlots: 4
+  maxSlots: 5
+  canPickup: 0
   dropLocation: {x: 0, y: -1.2, z: 0}
   audioSource: {fileID: 3065358469146465161}
   droppedItemPrefab: {fileID: 8395736586585706607, guid: d3160db3c3209db4db4c7693253c9858, type: 3}
   pickUpItemAudio: {fileID: 8300000, guid: 06af17fd74785e74bbddb0b2f6a42fa8, type: 3}
   dropItemAudio: {fileID: 8300000, guid: b3d99df1f0d1e3749a6d9699d680d6a9, type: 3}
+  inventoryButton: 105
+  inventoryCanvas: {fileID: 0}
+  onOff: 1
   inventory:
     m_Keys: []
     m_Values: []
@@ -9978,6 +9981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 3717315735616895255}
+  animator: {fileID: 8198180722215209813}
 --- !u!50 &3717315735616895255
 Rigidbody2D:
   serializedVersion: 5
@@ -10041,19 +10045,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.01054585, y: -0.38236898}
   m_Radius: 0.14926904
---- !u!114 &874403446427657055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6077175691526500261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4502340925b8f42a2659a20c1f81d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8198180722215209813}
 --- !u!95 &8198180722215209813
 Animator:
   serializedVersion: 7

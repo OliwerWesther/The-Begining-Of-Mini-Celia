@@ -72,6 +72,11 @@ public class MenuController : MonoBehaviour
         exitButton.SetActive(false);
     }
 
+    public void StartGameClick()
+    {
+        MenuCanvas.SetActive(false);
+    }
+
     public void OnBackClick()
     {
         //true

@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour,ISavable
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
-    public object save()
+    public object save() //Save said thing to the JSON file in the SaveManager.
     {
         return new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
-    public void load(object data)
+    public void load(object data) //Load said thing from the JSON file.
     {
         transform.position = (Vector3)data;
     }

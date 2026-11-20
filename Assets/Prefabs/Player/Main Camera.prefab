@@ -173,5 +173,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e7930183fa5924494b5ac68aac445d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6077175691526500261, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+  player: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
   ZPosition: -11
