@@ -135,7 +135,9 @@ Material:
     - _WaveSpeed: 2.1
     - _WaveTiling: 7.15
     - _WorldScale: 0.31
+    - _YOffset: 0
     - _ZWrite: 0
+    - _test: 0
     m_Colors:
     - _CellColor: {r: 0.09999997, g: 0.9, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +146,7 @@ Material:
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShallowColor: {r: 0.049999982, g: 0.75, b: 1, a: 1}
     - _SparkleColor: {r: 0.8, g: 1, b: 1, a: 1}
+    - _Test: {r: 0, g: 0, b: 0, a: 0}
     - _UVOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WaterColor: {r: 0.09344954, g: 0.4164666, b: 0.6603774, a: 0}
     - _Wave1Direction: {r: 1, g: 0.25, b: 0, a: 0}
