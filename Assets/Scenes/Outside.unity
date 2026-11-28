@@ -32516,7 +32516,7 @@ GameObject:
   - component: {fileID: 1011384870}
   - component: {fileID: 1011384868}
   m_Layer: 0
-  m_Name: WaterCamera
+  m_Name: ReflectionCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32530,12 +32530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011384866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: -1.2, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.09000015, y: 0.78999996, z: -9}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1764398324}
+  m_Father: {fileID: 1735312875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1011384868
 MonoBehaviour:
@@ -32591,7 +32591,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 1, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -32616,7 +32616,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 2.66
+  orthographic size: 2.5
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
@@ -50875,6 +50875,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3065358469146465161, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
   m_PrefabInstance: {fileID: 3681809876464868375}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1735312875 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+  m_PrefabInstance: {fileID: 3681809876464868375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738774249
 GameObject:
   m_ObjectHideFlags: 0
@@ -51353,7 +51358,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2042965931}
-  - {fileID: 1011384867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767216087
@@ -58368,7 +58372,7 @@ GameObject:
   - component: {fileID: 2042965930}
   - component: {fileID: 2042965932}
   - component: {fileID: 2042965933}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58862,11 +58866,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.5
+      value: 19.05
       objectReference: {fileID: 0}
     - target: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.84
       objectReference: {fileID: 0}
     - target: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58928,13 +58932,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8353582743780749236, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353582743780749236, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9172280925275770688, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
       propertyPath: inventoryCanvas
       value: 
       objectReference: {fileID: 552898036}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3111928683025411568, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1011384867}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc49785a48466614ebca8664bc7c7c2b, type: 3}
 --- !u!1001 &8301076762263935948
